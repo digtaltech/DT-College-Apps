@@ -23,6 +23,7 @@ import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton
 
 
 class App extends Component {
+	$nameStud;
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -56,25 +57,35 @@ class App extends Component {
 	}
 
 	getLogs($id){
-		fetch("https://dt-prod.tk/api/v2/Api.php?apicall=getlog&id="+$id)
+		fetch("http://api/v2/Api.php?apicall=getlogtoday&id="+$id)
 			.then(res => res.json())
 			.then(
 				result => {
-					this.setState({
-						isLoaded: true,
-						items1: result.logs
-					});
+					if(result == null) {
+						alert("Нет данных");
+					}
+					else{
+						this.setState({
+							isLoaded: true,
+								items1: result.logs_today
+						}
+						);
+
+					}
+
 				},
 				// Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
 				// чтобы не перехватывать исключения из ошибок в самих компонентах.
 				error => {
 					this.setState({
-						isLoaded: false,
+						isLoaded: true,
 						error
 					});
 				}
 			);
 	}
+
+
 
 
 	render() {
@@ -94,7 +105,7 @@ class App extends Component {
 							<Group>
 								<List>
 									{items.map(item => (
-										<Cell onClick={ () => {this.setState({ activeView: 'studLog' });  this.getLogs(item.ID)} } before={<Avatar />} key={item.ID}  >
+										<Cell onClick={ () => {this.setState({ activeView: 'studLog' });  this.getLogs(item.ID);  {this.$nameStud = item.FirstName + " "+ item.LastName}} } before={<Avatar />} key={item.ID}  >
 											{item.FirstName} {item.LastName}
 										</Cell>
 									))}
@@ -109,7 +120,7 @@ class App extends Component {
 							<PanelHeader
 								left={<PanelHeaderBack onClick={ () => this.setState({ activeView: 'studList' }) }/>} // Чтобы вернуться обратно
 							>
-								Посещаемость
+								{this.$nameStud}
 							</PanelHeader>
 							<Group>
 								{/*// Тут активити*/}
@@ -118,8 +129,8 @@ class App extends Component {
 								{/*</CellButton>*/}
 								<List>
 									{items1.map(item => (
-										<Cell before={<Avatar />} key={item.ID} >
-											{item.IdStud}  {item.Time} {item.Event}
+										<Cell key={item.ID}>
+											[{item.Time}] {item.Event}
 										</Cell>
 									))}
 								</List>
