@@ -35,7 +35,7 @@ class App extends Component {
 
 	}
 	componentDidMount() {
-		fetch("http://dt-prod.tk/api/v2/Api.php?apicall=getusers")
+		fetch("https://dt-prod.tk/api/v2/Api.php?apicall=getusers")
 			.then(res => res.json())
 			.then(
 				result => {
@@ -56,7 +56,7 @@ class App extends Component {
 	}
 
 	getLogs($id){
-		fetch("http://api/v2/Api.php?apicall=getlog&id="+$id)
+		fetch("https://dt-prod.tk/api/v2/Api.php?apicall=getlog&id="+$id)
 			.then(res => res.json())
 			.then(
 				result => {
@@ -86,24 +86,24 @@ class App extends Component {
 		} else {
 			return (
 				<Root activeView={this.state.activeView}>
-				<View activePanel="list" id="studList">
-					<Panel id="list">
-						<PanelHeader>
-							Студенты
-						</PanelHeader>
-						<Group>
-							<List>
-								{items.map(item => (
-									<Cell onClick={ () => {this.setState({ activeView: 'studLog' });  this.getLogs(item.ID)} } before={<Avatar />} key={item.ID}  >
-										{item.FirstName} {item.LastName}
-									</Cell>
-								))}
-							</List>
-						</Group>
+					<View activePanel="list" id="studList">
+						<Panel id="list">
+							<PanelHeader>
+								Студенты
+							</PanelHeader>
+							<Group>
+								<List>
+									{items.map(item => (
+										<Cell onClick={ () => {this.setState({ activeView: 'studLog' });  this.getLogs(item.ID)} } before={<Avatar />} key={item.ID}  >
+											{item.FirstName} {item.LastName}
+										</Cell>
+									))}
+								</List>
+							</Group>
 
-					</Panel>
+						</Panel>
 
-				</View>
+					</View>
 					<View header activePanel="logs" id="studLog">
 						<Panel id="logs">
 							<PanelHeader
