@@ -55,7 +55,6 @@ class App extends Component {
 				}
 			);
 	}
-
 	getLogs($id){
 		fetch("https://dt-prod.tk/api/v2/Api.php?apicall=getlogtoday&id="+$id)
 			.then(res => res.json())
