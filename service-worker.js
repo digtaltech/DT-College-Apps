@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DT-College-Apps/precache-manifest.f5bfaffb9c2c6099b9e43e7f7ce354c5.js"
+  "/DT-College-Apps/precache-manifest.ae2c01a5678b68361d0778f557350bab.js"
 );
 
 self.addEventListener('message', (event) => {
