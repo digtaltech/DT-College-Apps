@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fe7aa5a30deb818fdfd843922b78d9d2",
+    "revision": "afd70a0cc723aea179c56412d85e4b2b",
     "url": "/DT-College-Apps/index.html"
   },
   {
-    "revision": "47562b0e1abe075c39da",
+    "revision": "a69ea2b9b25bcf49b5dd",
     "url": "/DT-College-Apps/static/css/2.ae2f4c93.chunk.css"
   },
   {
-    "revision": "9c0c106347fd756c3173",
+    "revision": "48062fee7f88e4ab3ba9",
     "url": "/DT-College-Apps/static/css/main.981f7211.chunk.css"
   },
   {
-    "revision": "47562b0e1abe075c39da",
-    "url": "/DT-College-Apps/static/js/2.d7399970.chunk.js"
+    "revision": "a69ea2b9b25bcf49b5dd",
+    "url": "/DT-College-Apps/static/js/2.753b89b7.chunk.js"
   },
   {
-    "revision": "9c0c106347fd756c3173",
-    "url": "/DT-College-Apps/static/js/main.b12f6638.chunk.js"
+    "revision": "48062fee7f88e4ab3ba9",
+    "url": "/DT-College-Apps/static/js/main.2ca01fe6.chunk.js"
   },
   {
     "revision": "65bbbae26f31ef79cf68",
