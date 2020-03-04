@@ -21,6 +21,7 @@ import {
 } from "@vkontakte/vkui";
 
 import Icon20Recent from '@vkontakte/icons/dist/24/recent';
+import  Icon24User from '@vkontakte/icons/dist/24/user';
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
 
 
@@ -106,7 +107,7 @@ class App extends Component {
 							<Group>
 								<List>
 									{items.map(item => (
-										<Cell onClick={ () => {this.setState({ activeView: 'studLog' });  this.getLogs(item.ID);  {this.$nameStud = item.FirstName + " "+ item.LastName}} } before={<Avatar />} key={item.ID}  >
+										<Cell onClick={ () => {this.setState({ activeView: 'studLog' });  this.getLogs(item.ID);  {this.$nameStud = item.FirstName + " "+ item.LastName}} } before={<Avatar ><Icon24User /></Avatar>} key={item.ID}  >
 											{item.FirstName} {item.LastName}
 										</Cell>
 									))}
