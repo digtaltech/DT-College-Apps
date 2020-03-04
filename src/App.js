@@ -19,6 +19,8 @@ import {
 	Avatar,
 
 } from "@vkontakte/vkui";
+
+import Icon20Recent from '@vkontakte/icons/dist/24/recent';
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
 
 
@@ -128,7 +130,7 @@ class App extends Component {
 								{/*</CellButton>*/}
 								<List>
 									{items1.map(item => (
-										<Cell key={item.ID}>
+										<Cell key={item.ID} before={<Icon20Recent />} >
 											[{item.Time}] {item.Event}
 										</Cell>
 									))}
