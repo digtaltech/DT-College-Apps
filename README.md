@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/VKCOM">
+  <a >
     <img width="100" height="100" src="https://avatars3.githubusercontent.com/u/1478241?s=200&v=4">
   </a>
   <br>
@@ -10,32 +10,14 @@
 
 </div>
 
-# VK Mini Apps: @vkontakte/create-vk-mini-app
+# DT College Mini Apps
 
-## How to install
+Приложение для просмотра посещаемости студентиов на базе VK Mini Apps
 
-### Create VK Mini App with gh-pages deploy
+# Функционал
 
-`npx @vkontakte/create-vk-mini-app <app-directory-name>`
-
-### Create VK Mini App with Zeit deploy
-
-Firstly, you have to create Zeit account and connect it with your GitHub profile — https://zeit.co/
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --zeit`
-
-### Create VK Mini App with Surge deploy
-
-Firstly, you have to create Surge account and Surge-domain — https://surge.sh/
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --surge <surge-domain>`
-
-## How to start work with app
-
-Go to created folder and run:
-`yarn start` || `npm start` — this will start dev server with hot reload on `localhost:10888`.
-
-`yarn run build` || `npm run build` — this will build production bundle, with tree-shaking, uglify and all this modern fancy stuff
+  - Просмотр всех студентов
+  - Просмотр посещений выбранного студента за сегодня
 
 [npm]: https://img.shields.io/npm/v/@vkontakte/create-vk-mini-app.svg
 [npm-url]: https://npmjs.com/package/@vkontakte/create-vk-mini-app
