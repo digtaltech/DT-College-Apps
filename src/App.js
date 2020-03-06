@@ -39,7 +39,7 @@ class App extends Component {
 
 	}
 	componentDidMount() {
-		fetch("https://dt-prod.tk/api/v2/Api.php?apicall=getusers")
+		fetch("https://dt-prod.ru/api/v2/Api.php?apicall=getusers")
 			.then(res => res.json())
 			.then(
 				result => {
@@ -59,7 +59,7 @@ class App extends Component {
 			);
 	}
 	getLogs($id){
-		fetch("https://dt-prod.tk/api/v2/Api.php?apicall=getlogtoday&id="+$id)
+		fetch("https://dt-prod.ru/api/v2/Api.php?apicall=getlogtoday&id="+$id)
 			.then(res => res.json())
 			.then(
 				result => {
